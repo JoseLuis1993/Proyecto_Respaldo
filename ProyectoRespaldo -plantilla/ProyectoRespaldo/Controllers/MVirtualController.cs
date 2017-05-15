@@ -9,13 +9,10 @@ namespace ProyectoRespaldo.Controllers
 {
     public class MVirtualController : Controller
     {
-        private RespaldoEntities db = new RespaldoEntities();
-
-    
         // GET: MVirtual
         public ActionResult Index_MVirtual()
         {
-            return View(db.persona.ToList());
+            return View();
         }
 
 
