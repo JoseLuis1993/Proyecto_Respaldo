@@ -9,10 +9,23 @@ namespace ProyectoRespaldo.Controllers
 {
     public class MVirtualController : Controller
     {
+        List<Informacion> datos = new List<Informacion>();
+
+        public MVirtualController()
+        {
+            datos.Add(new Informacion("Jose", "Rios2", 19, true, DateTime.Now.Date));
+            datos.Add(new Informacion("Josex", "Rios2", 25, true, DateTime.Now.Date));
+            datos.Add(new Informacion("Joset", "Rios3", 36, false, DateTime.Now.Date));
+            datos.Add(new Informacion("Joser", "Rios4", 47, true, DateTime.Now.Date));
+            datos.Add(new Informacion("Joset", "Rios4", 58, false, DateTime.Now.Date));
+            datos.Add(new Informacion("Joseq", "Rios5", 67, false, DateTime.Now.Date));
+
+        }
+
         // GET: MVirtual
         public ActionResult Index_MVirtual()
         {
-            return View();
+            return View(datos);
         }
 
 

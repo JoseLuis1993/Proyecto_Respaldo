@@ -3,15 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ProyectoRespaldo.Models;
 
 namespace ProyectoRespaldo.Controllers
 {
     public class PoliticaController : Controller
     {
+        List<Informacion> datos = new List<Informacion>();
+
+        public PoliticaController()
+        {
+            datos.Add(new Informacion("Jose", "Rios2", 19, true, DateTime.Now.Date));
+            datos.Add(new Informacion("Josex", "Rios2", 25, true, DateTime.Now.Date));
+            datos.Add(new Informacion("Joset", "Rios3", 36, false, DateTime.Now.Date));
+            datos.Add(new Informacion("Joser", "Rios4", 47, true, DateTime.Now.Date));
+            datos.Add(new Informacion("Joset", "Rios4", 58, false, DateTime.Now.Date));
+            datos.Add(new Informacion("Joseq", "Rios5", 67, false, DateTime.Now.Date));
+
+        }
+
         // GET: Politica
         public ActionResult Index_Politica()
         {
-            return View();
+            return View(datos);
         }
 
         // GET: Politica/Details/5
