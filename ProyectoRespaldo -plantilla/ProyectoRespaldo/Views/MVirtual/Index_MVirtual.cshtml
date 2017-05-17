@@ -2,63 +2,81 @@
 @{
     ViewBag.Title = "Index_MVirtual";
 }
-<h2>Index_Prueba</h2><br />
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
 
-    <table id="example" class="table table-striped table-bordered dt-responsive nowrap" border="0" cellspacing="0" width="100%">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.nombre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.apellido)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.edad)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.status)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.fecha_nac)
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-            {
+<h2>Máquinas Virtuales</h2><br />
+
+<div class="dt-buttons" align="right" >
+    <button id="button" class="btn btn-primary">Crear Grupo</button>
+</div><br />
+
+    <table id="example" class="display dataTable" border="0" cellspacing="0">
+        <thead>
             <tr>
                 <th>
-                    @Html.DisplayFor(modelItem => item.nombre)
+                    @Html.DisplayNameFor(model => model.nombre)
                 </th>
                 <th>
-                    @Html.DisplayFor(modelItem => item.apellido)
+                    @Html.DisplayNameFor(model => model.apellido)
                 </th>
                 <th>
-                    @Html.DisplayFor(modelItem => item.edad)
+                    @Html.DisplayNameFor(model => model.edad)
                 </th>
                 <th>
-                    @Html.DisplayFor(modelItem => item.status)
+                    @Html.DisplayNameFor(model => model.status)
                 </th>
                 <th>
-                    @Html.DisplayFor(modelItem => item.fecha_nac)
+                    @Html.DisplayNameFor(model => model.fecha_nac)
                 </th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.apellido)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.edad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.status)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.fecha_nac)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 
 
- @section scripts
+    @section scripts
 {
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/datatables")
-    <script type="text/javascript">
-   
-        $(document).ready(function () {
-            $('#example').DataTable();
-        });
-    </script>
-}
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/datatables")
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+                var table = $('#example').DataTable();
+
+                $('#example tbody').on('click', 'tr', function () {
+                    $(this).toggleClass('selected');
+                });
+
+                $('#button').click(function () {
+                    alert(table.rows('.selected').data().length + ' row(s) selected');
+                    for (i = 0; i < table.rows('.selected').data().length; i++) {
+                        seletArray = table.rows('.selected').data()[i][0];
+                        alert(seletArray);
+                    }
+                });
+            });
+        </script>
+    }
 
 

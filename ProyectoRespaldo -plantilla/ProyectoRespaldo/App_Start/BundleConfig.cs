@@ -28,14 +28,19 @@ namespace ProyectoRespaldo
                       "~/Content/site.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/datatables").Include(
-                        "~/Scripts/DataTables/jquery.dataTables.js", "~/Scripts/DataTables/dataTables.tableTools.js",
+                        "~/Scripts/DataTables/jquery.dataTables.js",
+                         "~/Scripts/DataTables/jquery.dataTables.min.js",
+                        "~/Scripts/DataTables/dataTables.tableTools.js",
                         "~/Scripts/DataTables/dataTables.scroller.min.js",
                         "~/Scripts/DataTables/dataTables.bootstrap.js"
                         ));
             bundles.Add(new StyleBundle("~/Content/css").Include(
                         "~/Content/bootstrap.css",
                         "~/Content/site.css",
-                        "~/Content/DataTables/css/dataTables.bootstrap.css"));
+                        "~/Content/DataTables/css/dataTables.bootstrap.css",
+                        "~/Content/DataTables/css/jquery.dataTables.min.css",
+                        "~/Content/DataTables/css/editor.dataTables.min.css"
+                        ));
         }
     }
 }
