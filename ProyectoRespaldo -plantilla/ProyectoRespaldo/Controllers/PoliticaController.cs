@@ -28,6 +28,11 @@ namespace ProyectoRespaldo.Controllers
             return View(datos);
         }
 
+        public ActionResult AsignPolitica()
+        {
+            return View();
+        }
+
         // GET: Politica/Details/5
         public ActionResult Details(int id)
         {

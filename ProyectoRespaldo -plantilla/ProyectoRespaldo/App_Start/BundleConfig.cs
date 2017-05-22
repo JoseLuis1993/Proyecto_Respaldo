@@ -32,6 +32,8 @@ namespace ProyectoRespaldo
                          "~/Scripts/DataTables/jquery.dataTables.min.js",
                         "~/Scripts/DataTables/dataTables.tableTools.js",
                         "~/Scripts/DataTables/dataTables.scroller.min.js",
+                        "~/Scripts/percircle.js",
+                        "~/Scripts/multiselect.js",
                         "~/Scripts/DataTables/dataTables.bootstrap.js"
                         ));
             bundles.Add(new StyleBundle("~/Content/css").Include(
@@ -39,7 +41,8 @@ namespace ProyectoRespaldo
                         "~/Content/site.css",
                         "~/Content/DataTables/css/dataTables.bootstrap.css",
                         "~/Content/DataTables/css/jquery.dataTables.min.css",
-                        "~/Content/DataTables/css/editor.dataTables.min.css"
+                        "~/Content/DataTables/css/editor.dataTables.min.css",
+                        "~/Content/percircle.css"
                         ));
         }
     }
