@@ -697,6 +697,5 @@ C:\Users\e00011000\Source\Repos\Proyecto_Respaldo2\ProyectoRespaldo -plantilla\P
 C:\Users\e00011000\Source\Repos\Proyecto_Respaldo2\ProyectoRespaldo -plantilla\ProyectoRespaldo\bin\es\Microsoft.Owin.Security.Google.resources.dll
 C:\Users\e00011000\Source\Repos\Proyecto_Respaldo2\ProyectoRespaldo -plantilla\ProyectoRespaldo\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
 C:\Users\e00011000\Source\Repos\Proyecto_Respaldo2\ProyectoRespaldo -plantilla\ProyectoRespaldo\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-C:\Users\e00011000\Source\Repos\Proyecto_Respaldo2\ProyectoRespaldo -plantilla\ProyectoRespaldo\obj\Debug\ProyectoRespaldo.csprojResolveAssemblyReference.cache
 C:\Users\e00011000\Source\Repos\Proyecto_Respaldo2\ProyectoRespaldo -plantilla\ProyectoRespaldo\obj\Debug\ProyectoRespaldo.dll
 C:\Users\e00011000\Source\Repos\Proyecto_Respaldo2\ProyectoRespaldo -plantilla\ProyectoRespaldo\obj\Debug\ProyectoRespaldo.pdb
